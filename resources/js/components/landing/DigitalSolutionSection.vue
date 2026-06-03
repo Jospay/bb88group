@@ -27,7 +27,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="Agriculture & Food Security.png" alt="Agriculture & Food Security" class="w-16 h-16 object-contain">
+          <img src="/assets/Agriculture & Food Security.png" alt="Agriculture & Food Security" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Agriculture & Food Security
@@ -45,7 +45,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="bagsakan ecosystem.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
+          <img src="/assets/Bagsakan Ecosystem.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Bagsakan Ecosystem
@@ -63,7 +63,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="E-Mobility Solutions.png" alt="E-Mobility Solutions" class="w-16 h-16 object-contain">
+          <img src="/assets/E-Mobility Solutions.png" alt="E-Mobility Solutions" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           E-Mobility Solutions
@@ -81,7 +81,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="AI & Biotechnology.png" alt="AI & Biotechnology" class="w-16 h-16 object-contain">
+          <img src="/assets/AI & Biotechnology.png" alt="AI & Biotechnology" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Biotechnology & Health AI/ML
@@ -99,7 +99,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="Modern Sustainability Learning.png" alt="Modern Sustainability Learning" class="w-16 h-16 object-contain">
+          <img src="/assets/Modern Sustainability Learning.png" alt="Modern Sustainability Learning" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Modern Sustainability Learning
@@ -117,7 +117,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="wellness.png" alt="Wellness & Human Interactions" class="w-16 h-16 object-contain">
+          <img src="/assets/Wellness & Human Interactions.png" alt="Wellness & Human Interactions" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Wellness & Human Interactions
@@ -162,7 +162,7 @@
     <button onclick="document.getElementById('modal-bagsakan').classList.add('hidden')" class="absolute top-6 right-8 text-slate-400 hover:text-white text-3xl">×</button>
     <h2 class="text-4xl font-black mb-6 text-emerald-400">Bagsakan Ecosystem</h2>
     <div>
-      <img src="bagsakan-logos.jpg" alt="logo" class="h-10 sm:h-12 w-auto mb-6">
+      <img src="/assets/Bagsakan Ecosystem.png" alt="logo" class="h-10 sm:h-12 w-auto mb-6">
     </div>
     <div class="space-y-6 text-slate-300">
       <p class="leading-relaxed">
@@ -221,7 +221,7 @@
 
   <!-- Fullscreen Image -->
   <img
-    src="bagsakan-flow.jpg"
+    src="/assets/Bagsakan Flow Diagram.jpg"
     alt="Bagsakan Flow Diagram"
     class="w-screen h-screen object-contain">
 </div>

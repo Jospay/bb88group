@@ -7,7 +7,7 @@
         <nav class="flex items-center justify-between gap-4 py-4 border-b border-white/10">
           <!-- Logo -->
           <div class="flex-shrink-0">
-            <img src="bb88.png" alt="logo" class="h-10 sm:h-12 w-auto">
+            <img src="/assets/bb88.png" alt="logo" class="h-10 sm:h-12 w-auto">
           </div>
           
           <!-- Navigation Links (Hidden on Mobile, Visible on Desktop) -->

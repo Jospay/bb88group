@@ -11,7 +11,7 @@
               <div class="space-y-6">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-yellow-500/10 rounded-xl flex items-center justify-center border border-yellow-500/20 shrink-0">
-                  <img src="Phone.png" alt="Phone Icon" class="w-6 h-6 object-contain">
+                  <img src="/assets/Phone.png" alt="Phone Icon" class="w-6 h-6 object-contain">
                 </div>
                 <div>
                   <h4 class="font-bold text-white">Phone</h4>
@@ -21,7 +21,7 @@
 
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center border border-cyan-500/20 shrink-0">
-                  <img src="Email1.png" alt="Email Icon" class="w-6 h-6 object-contain">
+                  <img src="/assets/Email1.png" alt="Email Icon" class="w-6 h-6 object-contain">
                 </div>
                 <div>
                   <h4 class="font-bold text-white">Email</h4>
@@ -32,7 +32,7 @@
 
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center border border-pink-500/20 shrink-0">
-                  <img src="Open Hours.png" alt="Hours Icon" class="w-6 h-6 object-contain">
+                  <img src="/assets/Open Hours.png" alt="Hours Icon" class="w-6 h-6 object-contain">
                 </div>
                 <div>
                   <h4 class="font-bold text-white">Open Hours</h4>
@@ -42,7 +42,7 @@
 
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center border border-emerald-500/20 shrink-0">
-                  <img src="Location1.png" alt="Location Icon" class="w-6 h-6 object-contain">
+                  <img src="/assets/Location1.png" alt="Location Icon" class="w-6 h-6 object-contain">
                 </div>
                 <div>
                   <h4 class="font-bold text-white">Location</h4>
