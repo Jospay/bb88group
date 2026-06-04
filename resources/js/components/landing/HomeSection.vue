@@ -2,6 +2,7 @@
 </script>
 
 <template>
+      
             <div
           class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center"
         >
