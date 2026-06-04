@@ -2,6 +2,7 @@
 </script>
 
 <template>
+      
             <div
           class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center"
         >
@@ -75,7 +76,7 @@
               <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-900/20 p-6 rounded-3xl border border-emerald-500/20">
               <div class="mb-4">
                   <img 
-                    src="SMART Agriculture.png" 
+                    src="/assets/SMART Agriculture.png" 
                     alt="SMART Agriculture"
                     class="w-16 h-16 object-contain"
                   >
@@ -88,7 +89,7 @@
               <!-- Card 2 -->
               <div class="bg-gradient-to-br from-cyan-500/20 to-cyan-900/20 p-6 rounded-3xl border border-cyan-500/20">
                 <div class="mb-4">
-                  <img src="Geo Monitoring.png" alt="Geo Monitoring" class="w-16 h-16 object-contain">
+                  <img src="/assets/Geo Monitoring.png" alt="Geo Monitoring" class="w-16 h-16 object-contain">
                 </div>
                 <h3 class="font-bold text-lg mb-2">Geo Monitoring</h3>
                 <p class="text-sm text-slate-300">
@@ -99,7 +100,7 @@
               <!-- Card 3 -->
               <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-900/20 p-6 rounded-3xl border border-yellow-500/20">
                 <div class="mb-4">
-                  <img src="Bagsakan Digital.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
+                  <img src="/assets/Bagsakan Digital.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
                 </div>
                 <h3 class="font-bold text-lg mb-2">Bagsakan Digital</h3>
                 <p class="text-sm text-slate-300">
@@ -110,7 +111,7 @@
               <!-- Card 4 -->
               <div class="bg-gradient-to-br from-pink-500/20 to-pink-900/20 p-6 rounded-3xl border border-pink-500/20">
                 <div class="mb-4">
-                  <img src="AI & Biotechnology.png" alt="AI & Biotechnology" class="w-16 h-16 object-contain">
+                  <img src="/assets/AI & Biotechnology.png" alt="AI & Biotechnology" class="w-16 h-16 object-contain">
                 </div>
                 <h3 class="font-bold text-lg mb-2">AI & Biotechnology</h3>
                 <p class="text-sm text-slate-300">

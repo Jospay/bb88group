@@ -1,4 +1,5 @@
-<script lang="ts"></script>
+<script lang="ts">
+</script>
 <template>
      <footer class="border-t border-white/10 px-6 lg:px-20 py-10 bg-slate-950">
         <div
