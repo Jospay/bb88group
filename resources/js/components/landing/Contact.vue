@@ -1,6 +1,6 @@
 <script lang="ts"></script>
 <template>
-     <section id="contact" class="px-6 lg:px-20 py-24 bg-slate-950/50">
+     <section id="contact" class="px-6 lg:px-20 py-24 bg-slate-950">
         <div class="max-w-7xl mx-auto">
           <div class="grid lg:grid-cols-2 gap-12">
             <div>

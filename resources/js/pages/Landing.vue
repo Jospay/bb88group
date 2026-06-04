@@ -4,6 +4,7 @@ import Footer from '@/components/Footer.vue';
 import Contact from '@/components/landing/Contact.vue';
 import DigitalSolutionSection from '@/components/landing/DigitalSolutionSection.vue';
 import HomeSection from '@/components/landing/HomeSection.vue';
+import ModernDigitalSection from '@/components/landing/ModernDigitalSection.vue';
 import NavBar from '@/components/NavBar.vue';
 
 
@@ -18,6 +19,12 @@ import NavBar from '@/components/NavBar.vue';
    <HomeSection />
    </section>
    <DigitalSolutionSection />
+   <section
+        class="px-6 lg:px-20 py-24 bg-gradient-to-b from-slate-900 to-slate-950"
+      >
+   <ModernDigitalSection />
+   </section>
+   
    <Contact />
    <Footer />
 </template>

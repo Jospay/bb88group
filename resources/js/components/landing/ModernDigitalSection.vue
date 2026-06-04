@@ -2,9 +2,7 @@
 </script>
 
 <template>
-      <section
-        class="px-6 lg:px-20 py-24 bg-gradient-to-b from-slate-900 to-slate-950"
-      >
+      
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-4">
@@ -113,7 +111,7 @@
                     <h3 class="text-3xl font-black mt-2">94%</h3>
                   </div>
                     <img
-                      src="/AI Sustainability Index.png"
+                      src="/assets/AI Sustainability Index.png"
                       alt="Sustainability Index Icon"
                       class="w-15 h-15 object-contain"
                     />
@@ -153,7 +151,6 @@
             </div>
           </div>
         </div>
-      </section>
 
       <!-- CTA -->
       <section class="px-6 lg:px-20 py-24">

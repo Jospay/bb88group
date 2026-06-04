@@ -45,7 +45,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="/assets/Bagsakan Ecosystem.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
+          <img src="/assets/bagsakan ecosystem.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Bagsakan Ecosystem
@@ -117,7 +117,7 @@
         class="group bg-white/5 border border-white/10 hover:border-emerald-400/40 transition-all duration-300 rounded-[28px] p-8 hover:-translate-y-2 hover:bg-white/10 text-left w-full"
       >
         <div class="mb-6">
-          <img src="/assets/Wellness & Human Interactions.png" alt="Wellness & Human Interactions" class="w-16 h-16 object-contain">
+          <img src="/assets/wellness.png" alt="Wellness & Human Interactions" class="w-16 h-16 object-contain">
         </div>
         <h3 class="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition">
           Wellness & Human Interactions
