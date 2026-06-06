@@ -5,7 +5,11 @@ use App\Http\Middleware\EnsureTeamMembership;
 use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Landing')->name('home');
+Route::inertia('/solutions', 'Solutions/Index')->name('solutions.index');
+Route::inertia('/innovation', 'Innovation')->name('innovation'); // Placeholder
+Route::inertia('/partnerships', 'Partnerships')->name('partnerships'); // Placeholder
 
+// Protected Team Routes
 Route::prefix('{current_team}')
     ->middleware(['auth', 'verified', EnsureTeamMembership::class])
     ->group(function () {
