@@ -2,10 +2,8 @@
 import { ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
 
-// 1. Wayfinder structures its outputs by directory paths or controller mappings.
-// Import the 'index' action from your generated solutions directory
 import { index as solutionsIndex } from '@/routes/solutions' 
-import { home, innovation, partnerships } from '@/routes' // For root level ones
+import { home, innovation, partnerships } from '@/routes' 
 
 const isMobileMenuOpen = ref(false)
 
