@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
-
-import { index as solutionsIndex } from '@/routes/solutions' 
+import { ref } from 'vue'
 import { home, innovation, partnerships } from '@/routes' 
+import { index as solutionsIndex } from '@/routes/solutions' 
 
 const isMobileMenuOpen = ref(false)
 
