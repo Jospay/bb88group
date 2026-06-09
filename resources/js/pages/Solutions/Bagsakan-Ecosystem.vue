@@ -30,7 +30,7 @@ const showAgriMap = ref(false)
           <p class="text-base lg:text-lg text-slate-400">
             Comprehensive Digital Agricultural Logistics & Smart Market Framework
           </p>
-          <img src="../bagsakan all.png" alt="Bagsakan Ecosystem Diagram" class="mt-3 rounded-lg w-full max-w-3xl mx-auto" />
+          <img src="assets/bagsakan all.png" alt="Bagsakan Ecosystem Diagram" class="mt-3 rounded-lg w-full max-w-3xl mx-auto" />
         </div>
 
         <main class="w-full space-y-4">
