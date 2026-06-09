@@ -12,7 +12,6 @@ const toggleMobileMenu = () => {
 </script>
 <template>
   <div class="mb-12 mx-auto max-w-7xl relative">
-    <!-- Nav Bar -->
     <nav class="flex items-center justify-between gap-4 py-4 border-b border-white/10">
       <!-- Logo -->
       <div class="flex-shrink-0">

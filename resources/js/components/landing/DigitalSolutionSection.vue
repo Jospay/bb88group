@@ -1,13 +1,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-// Mobile Menu State
 const isMobileMenuOpen = ref(false)
 
-// Modals Tracking State
 const activeModal = ref<string | null>(null)
 
-// Open / Close helper methods
 const openModal = (id: string) => {
   activeModal.value = id
 }
