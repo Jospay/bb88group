@@ -12,7 +12,11 @@ createInertiaApp({
     layout: (name) => {
         switch (true) {
             case name === 'Landing':
-                return null;
+            case name === 'Innovation':
+            case name === 'Partnerships':
+            case name.startsWith('Solutions/'): 
+                return null; // Or return a PublicMarketingLayout if you create one later
+
             case name.startsWith('auth/'):
                 return AuthLayout;
             case name.startsWith('settings/'):

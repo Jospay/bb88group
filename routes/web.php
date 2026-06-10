@@ -3,21 +3,84 @@
 use App\Http\Controllers\Teams\TeamInvitationController;
 use App\Http\Middleware\EnsureTeamMembership;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::inertia('/', 'Landing')->name('home');
-Route::inertia('/solutions', 'Solutions/Index')->name('solutions.index');
-Route::inertia('/innovation', 'Innovation')->name('innovation'); // Placeholder
-Route::inertia('/partnerships', 'Partnerships')->name('partnerships'); // Placeholder
+Route::inertia('/innovation', 'Innovation')->name('innovation');
+Route::inertia('/partnerships', 'Partnerships')->name('partnerships');
 
-// Protected Team Routes
-Route::prefix('{current_team}')
-    ->middleware(['auth', 'verified', EnsureTeamMembership::class])
-    ->group(function () {
-        Route::inertia('dashboard', 'Dashboard')->name('dashboard');
-    });
+Route::prefix('solutions')->name('solutions.')->group(function () {
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('invitations/{invitation}/accept', [TeamInvitationController::class, 'accept'])->name('invitations.accept');
+    Route::inertia('/', 'Solutions/Index')->name('index');
+
+    Route::inertia(
+        '/ai-ml-architecture-design',
+        'Solutions/Ai-Ml-Architecture-Design'
+    )->name('ai-ml-architecture-design');
+
+    Route::inertia(
+        '/bagsakan-ecosystem',
+        'Solutions/Bagsakan-Ecosystem'
+    )->name('bagsakan-ecosystem');
+
+    Route::inertia(
+        '/biotech-ai-ml-health-ecosystem',
+        'Solutions/Biotech-Ai-Ml-Health-Ecosystem'
+    )->name('biotech-ai-ml-health-ecosystem');
+
+    Route::inertia(
+        '/climate-smart-digital-infrastructure',
+        'Solutions/Climate-Smart-Digital-Infrastructure'
+    )->name('climate-smart-digital-infrastructure');
+
+    Route::inertia(
+        '/community-empowerment',
+        'Solutions/Community-Empowerment'
+    )->name('community-empowerment');
+
+    Route::inertia(
+        '/digital-innovation-research-labs',
+        'Solutions/Digital-Innovation-Research-Labs'
+    )->name('digital-innovation-research-labs');
+
+    Route::inertia(
+        '/e-mobility',
+        'Solutions/E-Mobility'
+    )->name('e-mobility');
+
+    Route::inertia(
+        '/geo-monitoring',
+        'Solutions/Geo-Monitoring'
+    )->name('geo-monitoring');
+
+    Route::inertia(
+        '/iot-based-environmental-systems',
+        'Solutions/Iot-Based-Environmental-Systems'
+    )->name('iot-based-environmental-systems');
+
+    Route::inertia(
+        '/sustainability-learning',
+        'Solutions/Sustainability-Learning'
+    )->name('sustainability-learning');
 });
 
-require __DIR__.'/settings.php';
+
+Route::prefix('{current_team}')
+    ->middleware([
+        'auth',
+        'verified',
+        EnsureTeamMembership::class,
+    ])
+    ->group(function () {
+        Route::inertia('/dashboard', 'Dashboard')
+            ->name('dashboard');
+    });
+
+Route::middleware('auth')->group(function () {
+    Route::get(
+        '/invitations/{invitation}/accept',
+        [TeamInvitationController::class, 'accept']
+    )->name('invitations.accept');
+});
+
+require __DIR__ . '/settings.php';
