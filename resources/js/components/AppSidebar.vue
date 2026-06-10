@@ -60,7 +60,7 @@ const footerNavItems: NavItem[] = [
                 </SidebarMenuItem>
             </SidebarMenu>
             <SidebarMenu>
-                <SidebarMenuItem>
+                <SidebarMenuItem v-if="page.props.auth.user">
                     <TeamSwitcher />
                 </SidebarMenuItem>
             </SidebarMenu>

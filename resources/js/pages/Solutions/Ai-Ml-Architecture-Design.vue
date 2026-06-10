@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+import { Link } from '@inertiajs/vue3'
 import { ref } from 'vue'
+import { index as solutionsIndex } from '@/routes/solutions' 
 
 const showMoreSolutions = ref(false)
 const showMoreBenefits = ref(false)
@@ -8,12 +10,26 @@ const showMoreBenefits = ref(false)
 <template>
   <main class="bg-slate-950 text-slate-100">
     <div class="absolute top-6 left-6 lg:left-20 z-50">
-      <a href="../solution.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white text-sm font-medium transition-all group">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-        </svg>
-        Back to Solutions
-      </a>
+      <Link
+            :href="solutionsIndex()"
+            class="group inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-slate-200 transition-all hover:bg-white/10 hover:text-white"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="h-4 w-4 transition-transform group-hover:-translate-x-1"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+            </svg>
+            Back to Solutions
+        </Link>
     </div>
 
     <section class="relative px-6 lg:px-20 pt-32 pb-20 bg-gradient-to-br from-emerald-900 via-slate-950 to-cyan-950 flex flex-col items-center min-h-screen">
