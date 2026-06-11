@@ -15,7 +15,7 @@ import NavBar from '@/components/NavBar.vue';
     </Head>
    <section class="relative px-6 lg:px-20 py-20 bg-gradient-to-br from-emerald-900 via-slate-950 to-cyan-950">
    <NavBar />
-   <HomeSection />I
+   <HomeSection />
    </section>
 
    <DigitalSolutionSection />
