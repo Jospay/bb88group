@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { Link } from '@inertiajs/vue3'
 import { ref } from 'vue'
 
 // Reactive state variables for handling conditional element visibility
@@ -8,28 +9,18 @@ const showAgriMap = ref(false)
 
 <template>
   <div class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased">
-        <div class="absolute top-6 left-6 lg:left-20 z-50">
-      <Link
-            :href="solutionsIndex()"
-            class="group inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-slate-200 transition-all hover:bg-white/10 hover:text-white"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="h-4 w-4 transition-transform group-hover:-translate-x-1"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                />
-            </svg>
-            Back to Solutions
-        </Link>
-    </div>
+       <div class="absolute top-6 left-6 lg:left-20 z-50"> 
+       <Link 
+         href="/solutions" 
+         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white text-sm font-medium transition-all group"
+       > 
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform"> 
+           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /> 
+         </svg> 
+         Back to Solutions 
+       </Link> 
+    </div> 
+
 
     <section class="relative px-6 lg:px-20 pt-32 pb-20 bg-gradient-to-br from-emerald-900 via-slate-950 to-cyan-950 flex flex-col items-center min-h-screen">
       <div class="max-w-7xl mx-auto w-full flex flex-col items-center">
@@ -126,44 +117,63 @@ const showAgriMap = ref(false)
                   <span class="text-slate-200 text-sm">Automated early warning systems </span>
                 </div>
               </div>
+<div class="text-left rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-4 hover:border-emerald-500/40 hover:bg-emerald-500/[0.02] transition-all group w-full">
+  <h3 class="text-emerald-400 text-base sm:text-lg font-semibold transition-colors group-hover:text-emerald-300">
+    Geo-Tagging & Agricultural Mapping
+  </h3>
+  <div class="flex items-center gap-3">
+    <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
+    <span class="text-slate-200 text-sm">GIS-based farm-to-market mapping</span>
+  </div>
+  <div class="flex items-center gap-3">
+    <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
+    <span class="text-slate-200 text-sm">Warehouse and distribution tracking</span>
+  </div>
+  <div class="flex items-center gap-3">
+    <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
+    <span class="text-slate-200 text-sm">Delivery network visualization</span>
+  </div>
+  <div class="flex items-center gap-3">
+    <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
+    <span class="text-slate-200 text-sm">Production and demand heatmaps</span>
+  </div>
+  
+  <div class="mt-4">
+    <!-- Trigger Button -->
+    <button
+      @click="showAgriMap = true"
+      class="px-4 py-2 mx-auto w-full rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-900 font-medium hover:from-emerald-400 hover:to-cyan-400 transition-colors cursor-pointer"
+    >
+      Show Image
+    </button>
 
-              <div class="text-left rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-4 hover:border-emerald-500/40 hover:bg-emerald-500/[0.02] transition-all group w-full">
-                <h3 class="text-emerald-400 text-base sm:text-lg font-semibold transition-colors group-hover:text-emerald-300">
-                  Geo-Tagging & Agricultural Mapping
-                </h3>
-                <div class="flex items-center gap-3">
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
-                  <span class="text-slate-200 text-sm">GIS-based farm-to-market mapping</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
-                  <span class="text-slate-200 text-sm">Warehouse and distribution tracking</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
-                  <span class="text-slate-200 text-sm">Delivery network visualization</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 flex-shrink-0"></div>
-                  <span class="text-slate-200 text-sm">Production and demand heatmaps</span>
-                </div>
-                <div class="mt-4">
-                  <button
-                    @click="showAgriMap = !showAgriMap"
-                    class="px-4 py-2 mx-auto w-full rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-900 font-medium hover:bg-emerald-300 transition-colors cursor-pointer"
-                  >
-                    {{ showAgriMap ? 'Hide Image' : 'Show Image' }}
-                  </button>
+    <!-- Full-Screen Modal Backdrop -->
+    <div
+      v-if="showAgriMap"
+      @click="showAgriMap = false"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm cursor-pointer"
+    >
+      <!-- Close Button (Top Right) -->
+      <button 
+        @click="showAgriMap = false" 
+        class="absolute top-4 right-4 text-white/70 hover:text-white text-2xl font-bold cursor-pointer"
+      >
+        &times;
+      </button>
 
-                  <img
-                    id="agri-map"
-                    src="/images/agri-mapping.jpg"
-                    alt="Agricultural Mapping"
-                    :class="{ 'hidden': !showAgriMap }"
-                    class="mt-4 w-full rounded-lg border border-emerald-400/40"
-                  />
-                </div>
-              </div>
+      <!-- Modal Image Container -->
+      <div class="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center">
+        <img
+          id="agri-map"
+          src="/assets/bagsakan-flow.jpg"
+          alt="Agricultural Mapping"
+          @click.stop
+          class="max-w-full max-h-[85vh] rounded-lg border border-emerald-400/40 object-contain cursor-default select-none"
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
               <div :class="{ 'hidden': !showMoreSolutions }" class="text-left rounded-xl border border-white/10 bg-white/5 p-6 flex flex-col gap-4 hover:border-emerald-500/40 hover:bg-emerald-500/[0.02] transition-all group w-full">
                 <h3 class="text-emerald-400 text-base sm:text-lg font-semibold transition-colors group-hover:text-emerald-300">
