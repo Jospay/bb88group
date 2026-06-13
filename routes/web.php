@@ -2,12 +2,17 @@
 
 use App\Http\Controllers\Teams\TeamInvitationController;
 use App\Http\Middleware\EnsureTeamMembership;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::inertia('/', 'Landing')->name('home');
-Route::inertia('/innovation', 'Innovation')->name('innovation');
-Route::inertia('/partnerships', 'Partnerships')->name('partnerships');
+Route::inertia('/innovation', 'Innovation/Index')
+    ->name('innovation');
+Route::inertia('/partnerships', 'Partnerships/Index')->name('partnerships');
+
+Route::get('/news-and-media', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/details/{id}', [NewsController::class, 'show'])->name('news.show');
 
 Route::prefix('solutions')->name('solutions.')->group(function () {
 
