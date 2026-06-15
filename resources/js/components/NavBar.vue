@@ -4,7 +4,6 @@ import { ref } from 'vue'
 
 import { home, innovation, partnerships } from '@/routes' 
 import { index as solutionsIndex } from '@/routes/solutions' 
-// Notice we removed the @/routes imports completely!
 
 const isMobileMenuOpen = ref(false)
 
