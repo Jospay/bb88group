@@ -14,6 +14,7 @@ createInertiaApp({
             case name === 'Landing':
             case name === 'Innovation/Index':
             case name === 'News/NewsMedia':
+            case name === 'News/NewsDetails':
             case name === 'Partnerships/Index':
             case name.startsWith('Solutions/'): 
                 return null; 

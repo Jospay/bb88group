@@ -45,17 +45,17 @@ return [
         ],
 
         'news_mysql' => [
-            'driver' => 'mysql',
-            'host' => env('NEWS_DB_HOST', '127.0.0.1'),
-            'port' => env('NEWS_DB_PORT', '3306'),
-            'database' => env('NEWS_DB_DATABASE', 'u708417958_newsdb'),
-            'username' => env('NEWS_DB_USERNAME', 'root'),
-            'password' => env('NEWS_DB_PASSWORD', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',
-            'strict' => true,
-        ],
+          'driver' => 'mysql',
+          'host' => env('DB_NEWS_HOST', '127.0.0.1'),
+          'port' => env('DB_NEWS_PORT', '3306'),
+          'database' => env('DB_NEWS_DATABASE'),
+          'username' => env('DB_NEWS_USERNAME'),
+          'password' => env('DB_NEWS_PASSWORD'),
+          'charset' => 'utf8mb4',
+          'collation' => 'utf8mb4_unicode_ci',
+          'prefix' => '',
+          'strict' => true,
+        ],      
 
         'mysql' => [
             'driver' => 'mysql',
