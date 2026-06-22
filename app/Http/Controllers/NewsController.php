@@ -27,7 +27,6 @@ class NewsController extends Controller
             )
             ->where('p.Is_Active', 1);
 
-        // Search
         if (! empty($search)) {
             $query->where(function ($q) use ($search) {
                 $q->where('p.PostTitle', 'LIKE', "%{$search}%")
@@ -35,7 +34,6 @@ class NewsController extends Controller
             });
         }
 
-        // Category Filter
         if (! empty($category) && $category != 'All') {
             $query->where('c.CategoryName', $category);
         }
@@ -88,8 +86,26 @@ class NewsController extends Controller
             abort(404);
         }
 
+        $otherNews = DB::connection('news_mysql')
+            ->table('tblposts as p')
+            ->join('tblcategory as c', 'p.CategoryId', '=', 'c.id')
+            ->select(
+                'p.id',
+                'p.PostTitle',
+                'p.PostImage',
+                'p.PostingDate',
+                'c.CategoryName'
+            )
+            ->where('p.Is_Active', 1)
+            ->where('p.id', '!=', $id) 
+            
+            ->orderBy('p.PostingDate', 'DESC')
+            ->limit(5)
+            ->get();
+
         return Inertia::render('News/NewsDetails', [
             'news' => $news,
+            'otherNews' => $otherNews,
         ]);
     }
 }
