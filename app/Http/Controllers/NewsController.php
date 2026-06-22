@@ -2,49 +2,94 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
-use Inertia\Response;
 
 class NewsController extends Controller
 {
-    public function index(): Response
+    public function index(Request $request)
     {
-        // 1. Capture absolute latest highlight record matching target category 14
-        $heroPost = Post::where('CategoryId', 14)
-            ->orderBy('postingdate', 'desc')
-            ->first();
+        $search = $request->search;
+        $category = $request->category;
+        $limit = $request->limit ?? 10;
 
-        // 2. Fetch trailing paginated grid cards, bypassing the active hero item cleanly
-        $posts = Post::where('CategoryId', 14)
-            ->when($heroPost, function ($query) use ($heroPost) {
-                return $query->where('id', '!=', $heroPost->id);
-            })
-            ->orderBy('postingdate', 'desc')
-            ->paginate(12)
-            ->withQueryString();
+        $query = DB::connection('news_mysql')
+            ->table('tblposts as p')
+            ->join('tblcategory as c', 'p.CategoryId', '=', 'c.id')
+            ->select(
+                'p.id',
+                'p.PostTitle',
+                'p.PostImage',
+                'p.PostUrl',
+                'p.PostingDate',
+                'c.CategoryName'
+            )
+            ->where('p.Is_Active', 1);
+
+        // Search
+        if (! empty($search)) {
+            $query->where(function ($q) use ($search) {
+                $q->where('p.PostTitle', 'LIKE', "%{$search}%")
+                    ->orWhere('c.CategoryName', 'LIKE', "%{$search}%");
+            });
+        }
+
+        // Category Filter
+        if (! empty($category) && $category != 'All') {
+            $query->where('c.CategoryName', $category);
+        }
+
+        $news = $query
+            ->orderBy('p.PostingDate', 'DESC')
+            ->paginate($limit);
+
+        $categories = DB::connection('news_mysql')
+            ->table('tblcategory')
+            ->pluck('CategoryName')
+            ->unique()
+            ->values();
 
         return Inertia::render('News/NewsMedia', [
-            'heroPost' => $heroPost,
-            'posts' => $posts
+            'news' => $news->items(),
+
+            'categories' => [
+                'All',
+                ...$categories,
+            ],
+
+            'pagination' => [
+                'current_page' => $news->currentPage(),
+                'last_page' => $news->lastPage(),
+                'total' => $news->total(),
+            ],
         ]);
     }
 
-    public function show($id): Response
+    public function show($id)
     {
-        $post = Post::with(['category'])->findOrFail($id);
+        $news = DB::connection('news_mysql')
+            ->table('tblposts as p')
+            ->join('tblcategory as c', 'p.CategoryId', '=', 'c.id')
+            ->select(
+                'p.id',
+                'p.PostTitle',
+                'p.PostDetails',
+                'p.PostImage',
+                'p.PostUrl',
+                'p.PostingDate',
+                'c.CategoryName'
+            )
+            ->where('p.id', $id)
+            ->where('p.Is_Active', 1)
+            ->first();
 
-        // Sidebar content lookup
-        $recentNews = Post::where('CategoryId', 14)
-            ->where('id', '!=', $id)
-            ->orderBy('postingdate', 'desc')
-            ->take(4)
-            ->get();
+        if (! $news) {
+            abort(404);
+        }
 
         return Inertia::render('News/NewsDetails', [
-            'post' => $post,
-            'recentNews' => $recentNews
+            'news' => $news,
         ]);
     }
 }

@@ -11,8 +11,12 @@ Route::inertia('/innovation', 'Innovation/Index')
     ->name('innovation');
 Route::inertia('/partnerships', 'Partnerships/Index')->name('partnerships');
 
-Route::get('/news-and-media', [NewsController::class, 'index'])->name('news.index');
-Route::get('/news/details/{id}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/news', [NewsController::class,'index'])
+    ->name('news');
+
+
+Route::get('/news/details/{id}', [NewsController::class,'show'])
+    ->name('news.details');
 
 Route::prefix('solutions')->name('solutions.')->group(function () {
 
