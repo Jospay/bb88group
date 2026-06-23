@@ -1,36 +1,39 @@
-<script setup>
-import { ref, computed } from 'vue';
+<script lang="ts" setup>
 import { router, Link } from '@inertiajs/vue3';
+import { ref, computed } from 'vue';
 import { home } from "@/routes"; 
+import type { NewsItem } from '@/types/news';
 
-const props = defineProps({
-    news: Array,
-    categories: Array,
-    pagination: Object,
-});
+// 2. Use it in defineProps just like before
+const props = defineProps<{
+    news: NewsItem[];
+    categories: string[];
+    pagination?: Record<string, unknown>;
+}>();
 
-const selectedCategory = defineModel();
+// Type the model value
+const selectedCategory = defineModel<string>();
 
 // Latest News & Carousel State
-const latestNews = computed(() => {
+const latestNews = computed<NewsItem[]>(() => {
     return props.news.slice(0, 5);
 });
 
-const activeIndex = ref(0);
+const activeIndex = ref<number>(0);
 
-const nextSlide = () => {
+const nextSlide = (): void => {
     if (latestNews.value.length) {
         activeIndex.value = (activeIndex.value + 1) % latestNews.value.length;
     }
 };
 
-const prevSlide = () => {
+const prevSlide = (): void => {
     if (latestNews.value.length) {
         activeIndex.value = (activeIndex.value - 1 + latestNews.value.length) % latestNews.value.length;
     }
 };
 
-const filterCategory = (category) => {
+const filterCategory = (category: string): void => {
     selectedCategory.value = category;
 
     router.get(
@@ -41,16 +44,19 @@ const filterCategory = (category) => {
         {
             preserveState: true,
             preserveScroll: true,
-        },
+        }
     );
 };
 
-const imageUrl = (image) => {
+const imageUrl = (image: string): string => {
     return `https://newsphilippinesonline.com/editortextadminpanel/postimages/${image}`;
 };
 
-const formatDate = (date) => {
-    if (!date) return '';
+const formatDate = (date: string | null | undefined): string => {
+    if (!date) {
+        return '';
+    }    
+
     return new Date(date.replace(' ', 'T')).toLocaleString();
 };
 </script>

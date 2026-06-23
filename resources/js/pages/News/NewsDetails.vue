@@ -1,17 +1,22 @@
-<script setup>
-import { computed } from 'vue';
+<script lang="ts" setup>
 import { Link } from '@inertiajs/vue3';
+import { computed } from 'vue';
+import type { NewsItem } from '@/types/news';
 
-const props = defineProps({
-    news: Object,
-    otherNews: {
-        type: Array,
-        default: () => []
-    }
+// 1. Define the type directly in this file
+
+
+// Use type-based declaration with `withDefaults` for fallback values
+const props = withDefaults(defineProps<{
+    news: NewsItem | null;
+    otherNews?: NewsItem[];
+}>(), {
+    news: null,
+    otherNews: () => []
 });
 
-// Automatically filter to show news in the same category, excluding the current one
-const relatedNewsList = computed(() => {
+// Explicitly type the return as an array of NewsItems
+const relatedNewsList = computed<NewsItem[]>(() => {
     if (!props.news || !props.otherNews || !Array.isArray(props.otherNews)) {
         return [];
     }
@@ -27,8 +32,8 @@ const relatedNewsList = computed(() => {
     }
 });
 
-// Dynamically change the sidebar title
-const sidebarTitle = computed(() => {
+// Explicitly type the return as a string
+const sidebarTitle = computed<string>(() => {
     if (!props.news || !props.otherNews || !Array.isArray(props.otherNews)) {
         return 'Latest News';
     }
@@ -40,13 +45,20 @@ const sidebarTitle = computed(() => {
     return hasRelated ? `More in ${props.news.CategoryName}` : 'Latest News';
 });
 
-const imageUrl = (image) => {
-    if (!image) return '';
+// Type parameters and return values
+const imageUrl = (image: string | null | undefined): string => {
+    if (!image) {
+        return '';
+    }
+    
     return `https://newsphilippinesonline.com/editortextadminpanel/postimages/${image}`;
 };
 
-const formatDate = (date) => {
-    if (!date) return '';
+const formatDate = (date: string | null | undefined): string => {
+    if (!date) {
+        return '';
+    }
+
     return new Date(date.replace(' ', 'T')).toLocaleString(undefined, {
         year: 'numeric',
         month: 'short',
