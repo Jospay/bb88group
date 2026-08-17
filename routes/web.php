@@ -71,6 +71,11 @@ Route::prefix('solutions')->name('solutions.')->group(function () {
         '/sustainability-learning',
         'Solutions/Sustainability-Learning'
     )->name('sustainability-learning');
+
+     Route::inertia(
+        '/cybersecurity',
+        'Solutions/CyberSecurity'
+    )->name('cybersecurity');
 });
 
 

@@ -8,7 +8,7 @@
             <p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-4">
               Future-Ready Innovation
             </p>
-            <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-8">
+            <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-8">
               Modern Digital Architecture
               <span
                 class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400"
@@ -108,7 +108,7 @@
                     <p class="text-slate-400 text-sm">
                       AI Sustainability Index
                     </p>
-                    <h3 class="text-3xl font-black mt-2">94%</h3>
+                    <h3 class="text-3xl font-black text-white mt-2">94%</h3>
                   </div>
                     <img
                       src="/assets/AI Sustainability Index.png"
@@ -124,14 +124,14 @@
                     <h4 class="text-sm text-emerald-300 mb-2">
                       Connected Systems
                     </h4>
-                    <p class="text-4xl font-black">150+</p>
+                    <p class="text-4xl text-white font-black">150+</p>
                   </div>
 
                   <div
                     class="bg-cyan-500/10 border border-cyan-500/20 rounded-3xl p-6"
                   >
                     <h4 class="text-sm text-cyan-300 mb-2">AI Models</h4>
-                    <p class="text-4xl font-black">12</p>
+                    <p class="text-4xl text-white font-black">12</p>
                   </div>
                 </div>
 
