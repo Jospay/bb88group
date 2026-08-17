@@ -5,7 +5,7 @@
           <div class="grid lg:grid-cols-2 gap-12">
             <div>
               <p class="text-emerald-400 uppercase tracking-[0.3em] text-sm mb-4">Get In Touch</p>
-              <h2 class="text-4xl lg:text-5xl font-black mb-8">Connect with Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Innovation Hub</span></h2>
+              <h2 class="text-4xl lg:text-5xl text-white font-black mb-8">Connect with Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Innovation Hub</span></h2>
               <p class="text-slate-400 text-lg mb-10">Have questions about our digital sustainability programs? Our team is ready to help you navigate the future of smart agriculture and AI integration.</p>
               
               <div class="space-y-6">

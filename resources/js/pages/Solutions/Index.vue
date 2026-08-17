@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { Link } from "@inertiajs/vue3";
 
-// 1. Pull single-word named routes directly from the root namespace
 import { home } from "@/routes"; 
 import * as solutionsRoutes from "@/routes/solutions";
 
@@ -14,8 +13,6 @@ const props = defineProps<{
     user: User | null
 }>()
 
-// 2. Invoke the Wayfinder functions directly. 
-// They return an object that Inertia's <Link> component reads automatically!
 const solutions = [
     {
         title: 'AI & Machine Learning Integration Architecture Design',
@@ -66,6 +63,11 @@ const solutions = [
         title: 'Modern Sustainability Learning Ecosystem',
         image: 'assets/Modern Sustainability Learning.png',
         route: solutionsRoutes.sustainabilityLearning(),
+    },
+        {
+        title: 'Cyber security and Data protection',
+        image: 'assets/CyberSecurity.png',
+        route: solutionsRoutes.cybersecurity(),
     },
 ]
 </script>
@@ -120,7 +122,6 @@ const solutions = [
                     </p>
                 </div>
 
-                <!-- Cards -->
                 <div
                     class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                 >
@@ -146,7 +147,6 @@ const solutions = [
                         </figure>
                     </Link>
 
-                    <!-- Learn More Card -->
                     <Link
                         :href="home()"
                         class="group flex min-h-[200px] flex-col items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 p-6 text-center shadow-lg shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-1.5 hover:from-emerald-600 hover:to-cyan-600 sm:min-h-full"

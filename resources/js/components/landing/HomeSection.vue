@@ -7,7 +7,7 @@ import { index as solutionsIndex } from '@/routes/solutions'
 <template>
   <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
     <div>
-      <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-8">
+      <h1 class="text-5xl lg:text-7xl font-black text-white leading-tight mb-8">
         Building a
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
           Smarter,
@@ -33,7 +33,7 @@ import { index as solutionsIndex } from '@/routes/solutions'
         
         <Link
           :href="innovation()"
-          class="inline-block border border-white/20 hover:border-cyan-400 hover:bg-white/10 transition px-8 py-4 rounded-2xl font-semibold backdrop-blur-sm cursor-pointer text-center"
+          class="inline-block border border-white/20 hover:border-cyan-400 text-white hover:bg-white/10 transition px-8 py-4 rounded-2xl font-semibold backdrop-blur-sm cursor-pointer text-center"
         >
           View Innovations
         </Link>
@@ -73,7 +73,7 @@ import { index as solutionsIndex } from '@/routes/solutions'
                 class="w-16 h-16 object-contain"
               >
             </div>
-            <h3 class="font-bold text-lg mb-2">SMART Agriculture</h3>
+            <h3 class="font-bold text-lg text-white mb-2">SMART Agriculture</h3>
             <p class="text-sm text-slate-300">
               Climate-smart greenhouse and precision farming systems.
             </p>
@@ -83,7 +83,7 @@ import { index as solutionsIndex } from '@/routes/solutions'
             <div class="mb-4">
               <img src="/assets/Geo Monitoring.png" alt="Geo Monitoring" class="w-16 h-16 object-contain">
             </div>
-            <h3 class="font-bold text-lg mb-2">Geo Monitoring</h3>
+            <h3 class="font-bold text-lg text-white mb-2">Geo Monitoring</h3>
             <p class="text-sm text-slate-300">
               Real-time analytics and environmental tracking platforms.
             </p>
@@ -93,7 +93,7 @@ import { index as solutionsIndex } from '@/routes/solutions'
             <div class="mb-4">
               <img src="/assets/Bagsakan Digital.png" alt="Bagsakan Digital" class="w-16 h-16 object-contain">
             </div>
-            <h3 class="font-bold text-lg mb-2">Bagsakan Digital</h3>
+            <h3 class="font-bold text-lg text-white mb-2">Bagsakan Digital</h3>
             <p class="text-sm text-slate-300">
               Smart logistics and digital agricultural marketplaces.
             </p>
@@ -103,7 +103,7 @@ import { index as solutionsIndex } from '@/routes/solutions'
             <div class="mb-4">
               <img src="/assets/AI & Biotechnology.png" alt="AI & Biotechnology" class="w-16 h-16 object-contain">
             </div>
-            <h3 class="font-bold text-lg mb-2">AI & Biotechnology</h3>
+            <h3 class="font-bold text-lg text-white mb-2">AI & Biotechnology</h3>
             <p class="text-sm text-slate-300">
               Machine learning and biotechnology-driven interventions.
             </p>
