@@ -66,7 +66,7 @@ const solutions = [
     },
         {
         title: 'Cyber security and Data protection',
-        image: 'assets/CyberSecurity.png',
+        image: 'assets/CyberSecurity/Cyber security and Data protection.png',
         route: solutionsRoutes.cybersecurity(),
     },
 ]
