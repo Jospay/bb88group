@@ -9,9 +9,9 @@ interface User {
     email: string
 }
 
-const props = defineProps<{
-    user: User | null
-}>()
+// const props = defineProps<{
+//     user: User | null
+// }>()
 
 const solutions = [
     {

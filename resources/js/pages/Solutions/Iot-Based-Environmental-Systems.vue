@@ -2,9 +2,8 @@
 import { Link } from '@inertiajs/vue3'
 import { ref } from 'vue'
 
-// Independent reactive toggles for expandable system matrices
 const showMoreSolutions = ref(false)
-const showMoreBenefits = ref(false)
+// const showMoreBenefits = ref(false)
 
 // Core Solutions Data Structure
 const coreSolutions = [
