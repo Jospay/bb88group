@@ -20,7 +20,9 @@ const closeModal = () => {
 }
 
 const handleKeyDown = (e: KeyboardEvent) => {
-  if (e.key === 'Escape') closeModal()
+  if (e.key === 'Escape') {
+closeModal()
+}
 }
 
 onMounted(() => window.addEventListener('keydown', handleKeyDown))
