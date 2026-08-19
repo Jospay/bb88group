@@ -3,7 +3,6 @@ import { Link } from '@inertiajs/vue3'
 import { ref } from 'vue'
 
 const showMoreSolutions = ref(false)
-// const showMoreBenefits = ref(false)
 
 // Core Solutions Data Structure
 const coreSolutions = [
