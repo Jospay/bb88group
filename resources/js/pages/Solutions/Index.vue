@@ -4,14 +4,6 @@ import { Link } from "@inertiajs/vue3";
 import { home } from "@/routes"; 
 import * as solutionsRoutes from "@/routes/solutions";
 
-interface User {
-    name: string
-    email: string
-}
-
-const props = defineProps<{
-    user: User | null
-}>()
 
 const solutions = [
     {
@@ -66,7 +58,7 @@ const solutions = [
     },
         {
         title: 'Cyber security and Data protection',
-        image: 'assets/CyberSecurity.png',
+        image: 'assets/CyberSecurity/Cyber security and Data protection.png',
         route: solutionsRoutes.cybersecurity(),
     },
 ]

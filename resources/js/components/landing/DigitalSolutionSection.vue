@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const isMobileMenuOpen = ref(false)
-
 const activeModal = ref<string | null>(null)
 
 const openModal = (id: string) => {

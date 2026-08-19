@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
+import { ref } from 'vue'
 
 // Independent state controls for the expandable grid modules
 const showMoreSolutions = ref(false)
